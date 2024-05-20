@@ -1,0 +1,129 @@
+.padrao-titulo {
+    font-family: $fonte_titulos;
+    font-size: var(--fonte-80px);
+    line-height: 1em;
+    text-transform: uppercase;
+
+    &.centralizar {
+        text-align: center;
+    }
+
+    &.fs50{
+        font-size: var(--fonte-50px);
+    }
+
+    small {
+        display: block;
+        font-family: $fonte_padrao;
+        font-size: var(--fonte-16px);
+        line-height: 1em;
+        margin-bottom: 20px;
+    }
+}
+
+.padrao-botao {
+    display: flex;
+    align-items: center;
+    font-size: var(--fonte-25px);
+    line-height: 64px;
+    background: transparent;
+    border: 1px solid currentColor;
+    padding: 0 40px;
+    border-radius: 32px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.4s;
+
+    svg {
+        display: block;
+        fill: currentColor;
+
+        &:first-child {
+            width: 1em;
+            height: 1em;
+            margin-right: 1ch;
+            margin-left: -10px;
+        }
+
+        &:last-child {
+            width: 0.6em;
+            height: 1em;
+            margin-left: 0.35em;
+        }
+    }
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+    }
+
+    &.uppercase {
+        text-transform: uppercase;
+
+        svg:last-child {
+            width: 0.75em;
+            margin-top: -0.2em;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &.fs18 {
+            font-size: var(--fonte-18px);
+            line-height: 58px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        line-height: 45px;
+        font-size: var(--fonte-20px);
+        padding: 0 25px;
+    }
+}
+
+.padrao-bloco {
+    padding: 125px 0;
+
+    &.branco+.branco {
+        padding-top: 25px;
+    }
+
+    @include media-breakpoint-down(md){
+        padding: 70px 0;
+
+        &.branco+.branco {
+            padding-top: 20px;
+        }
+    }
+}
+
+.swiper-navegacao {
+    position: relative;
+    display: flex;
+
+    .swiper-button-disabled {
+        opacity: 0.15;
+    }
+
+    button {
+        @extend %centralizar;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+
+        svg {
+            width: 50%;
+            height: 50%;
+            fill: currentColor;
+
+            @include media-breakpoint-down(md){
+                width: 40%;
+                height: 40%;
+            }
+        }
+
+        &:first-child svg {
+            transform: rotate(180deg);
+        }
+    }
+}

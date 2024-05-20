@@ -1,0 +1,139 @@
+.editor {
+    color: #363636;
+    line-height: 1.6em;
+
+    span[style="font-weight: 400;"]{
+        font-weight: 300 !important;
+    }
+
+    strong, b {
+        font-weight: 600;
+    }
+
+    i, em {
+        font-style: italic;
+    }
+
+    p,
+    ul,
+    ol,
+    blockquote {
+        line-height: 1.6em;
+
+        &+p,
+        &+ol,
+        &+ul,
+        &+blockquote {
+            margin-top: 1.7em;
+        }
+    }
+
+    blockquote {
+        font-size: var(--fonte-25px);
+        font-weight: 600;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+
+        @include media-breakpoint-up(lg){
+            padding-left: 20px;
+            border-left: 4px currentColor solid;
+        }
+    }
+
+    ul,
+    ol {
+        padding-left: 1.4em;
+
+        >li {
+            padding: 2px 0;
+
+            &::marker {
+                color: currentColor;
+                font-weight: 300;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin-top: 1.4em;
+        margin-bottom: 1.7em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h2 {
+        font-size: var(--fonte-25px)
+    }
+
+    h3, h4, h5, h6 {
+        font-size: var(--fonte-20px);
+    }
+
+    iframe,
+    img {
+        display: block;
+        width: 100%;
+        height: unset !important;
+        margin: 2em 0;
+    }
+
+    iframe {
+        width: 100% !important;
+        margin: 2em 0;
+        aspect-ratio: 16 / 9;
+    }
+
+    a {
+        position: relative;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after{
+            content: " ";
+            display: inline-block;
+            width: 1em;
+            height: 0.8em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23363636' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-external-link'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+            @include background-config(no-repeat, center, contain, transparent);
+            margin-left: 0.5ch
+        }
+    }
+
+    strong a{
+        @extend .padrao-botao;
+
+        &:hover{
+            text-decoration: none;
+        }
+        &::after{
+            display: none;
+        }
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+        margin: 3em 0;
+        background-color: currentColor;
+        height: 1px;
+        border: none;
+    }
+}

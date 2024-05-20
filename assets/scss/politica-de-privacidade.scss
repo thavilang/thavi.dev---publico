@@ -1,0 +1,17 @@
+@import "style";
+@import "modulos/editor";
+
+main{
+    padding: 95px 0 125px;
+    @include media-breakpoint-down(md){
+        padding: 50px 0 70px
+    }
+
+    h1{
+        margin-bottom: 70px;
+
+        @include media-breakpoint-down(md){
+            margin-bottom: 40px;
+        }
+    }
+}

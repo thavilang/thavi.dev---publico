@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('MarkPro.woff2') format('woff2'),
+        url('MarkPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MarkPro';
+    src: url('MarkPro-Black.woff2') format('woff2'),
+        url('MarkPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('MarkPro-Bold.woff2') format('woff2'),
+        url('MarkPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('MarkPro-Medium.woff2') format('woff2'),
+        url('MarkPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SCHABO Condensed';
+    src: url('SCHABO-Condensed.woff2') format('woff2'),
+        url('SCHABO-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
