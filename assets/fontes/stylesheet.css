@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'SCHABO Condensed';
+    font-family: 'Schabo';
     src: url('SCHABO-Condensed.woff2') format('woff2'),
         url('SCHABO-Condensed.woff') format('woff');
     font-weight: normal;
