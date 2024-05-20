@@ -101,7 +101,7 @@ $github = get_field('github', 'option');
                                 <?php echo sprite('icon-linkedin'); ?>
                                 <span>linkedin</span>
                             </a>
-                            <a target="_blank" href="<?php echo $curriculo['url']; ?>" download>
+                            <a target="_blank" href="<?php echo $curriculo['url']; ?>">
                                 <span>Currículo completo</span>
                                 <?php echo sprite('icon-nova-aba'); ?>
                             </a>
