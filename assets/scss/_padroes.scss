@@ -52,18 +52,20 @@
         }
     }
 
-    &:hover {
-        background-color: #000;
-        color: #fff;
-        border-color: #000;
-    }
-
     &.uppercase {
         text-transform: uppercase;
 
         svg:last-child {
             width: 0.75em;
             margin-top: -0.2em;
+        }
+    }
+
+    @include media-breakpoint-up(lg){       
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
         }
     }
 
