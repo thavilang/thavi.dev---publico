@@ -6,19 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title(); ?></title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/fontes/stylesheet.css?v=2">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/<?php echo $post->post_name ?>.css">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.png" type="image/png">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S85HDRPK7V"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-S85HDRPK7V');
-    </script>
 
     <?php wp_head(); ?>
 </head>
@@ -35,7 +23,7 @@
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                        <a href="<?php echo is_front_page() ? '#topo' : site_url() ?>" class="logo"><?php include 'assets/images/logo.svg'; ?>clique para ir para o topo</a>
+                        <a href="<?php echo is_front_page() ? '#topo' : site_url() ?>" class="logo"><?php include 'assets/images/logo.svg'; ?>clique para ir para <?php echo is_front_page() ? 'o topo' : 'a página inicial' ?></a>
                     </div>
                     <div class="col-auto">
                         <button js-button-menu id="menuBtn" class="toggle-menu">

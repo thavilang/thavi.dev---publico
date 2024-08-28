@@ -39,11 +39,6 @@ $email = get_field('e-mail', 'option');
 
 </div> <!--.no-overflow-->
 
-<script src="<?php echo get_template_directory_uri() . "/assets/js/modulos/abas.js"; ?>"></script>
-<script src="<?php echo get_template_directory_uri() . "/assets/js/plugins/swiper.min.js"; ?>"></script>
-<script src="<?php echo get_template_directory_uri() . "/assets/js/script.js"; ?>"></script>
-
-
 <?php wp_footer(); ?>
 </body>
 
